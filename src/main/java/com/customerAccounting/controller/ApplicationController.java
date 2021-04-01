@@ -90,12 +90,11 @@ public class ApplicationController {
      * @param customer - ввод клиента с новыми параметрами
      * @return - возвращение клиента с новыми параметрами
      */
-    //@PutMapping("/change_customer")
-    //public ResponseEntity<?> updateCustomer(@RequestBody @Valid Customer customer) {
-
-    //    customerService.save(customer);
-    //    return ResponseEntity.ok(customer);
-    //}
+     @PutMapping("/change_customer")
+     public ResponseEntity<?> updateCustomer(@RequestBody @Valid Customer customer)  {
+         customerService.save(customer);
+         return ResponseEntity.ok(customer);
+     }
 
     /**
      * Реализация изменения фактического адреса клиента,
