@@ -11,8 +11,3 @@
 Данные хранятся в двух таблицах: customer и address, поля registeredAddress и actualAddress ссылаются на таблицу Address посредством связи OneToOne через Hibernate.
 Удаление и Поиск клиента реализованы через параметры адресной строки
     
-Примеры:
-      
-  localhost:8080/show_customers?firsName=Vasya&lastName=Pupkin - поиск
-      
-  localhost:8080/delete_customer/3 - удаление
