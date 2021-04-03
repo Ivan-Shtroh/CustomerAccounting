@@ -10,6 +10,8 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 public interface CustomerRepository extends JpaRepository<Customer, Long>,
         JpaSpecificationExecutor<Customer> {
     Page<Customer> findAll(Specification<Customer> spec, Pageable pageable);
+    Customer findByFirstName(String firstName);
+    Customer findByLastName(String lastName);
 
 
 }

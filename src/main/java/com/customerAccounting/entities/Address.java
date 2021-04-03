@@ -46,14 +46,18 @@ public class Address {
     @Column(name = "flat")
     private String flat;
 
-    @JsonIgnore
     @NotEmpty
     @Column(name = "created")
     private LocalDateTime created;
 
-    @JsonIgnore
     @NotEmpty
     @Column(name = "modified")
     private LocalDateTime modified;
 
+    public Address(@NotEmpty String country, @NotEmpty String region, @NotEmpty String city, @NotEmpty String street) {
+        this.country = country;
+        this.region = region;
+        this.city = city;
+        this.street = street;
+    }
 }

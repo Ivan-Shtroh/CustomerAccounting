@@ -50,4 +50,14 @@ public class Customer {
     @Size(max = 6)
     private String sex;
 
+    public Customer(@NotNull Address registeredAddress, @NotNull Address actualAddress,
+                    @NotEmpty String firstName, @NotEmpty String lastName, String middleName,
+                    @NotNull @Pattern(regexp = "male|female", message = "Should be \"male\" or \"female\".") @Size(max = 6) String sex) {
+        this.registeredAddress = registeredAddress;
+        this.actualAddress = actualAddress;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.middleName = middleName;
+        this.sex = sex;
+    }
 }
